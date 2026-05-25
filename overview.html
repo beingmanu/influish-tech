@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystem Overview — Influish Tech Hub</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Logic Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Startup Loader Curtain -->
+  <div id="loading-curtain">
+    <div class="loader-spinner"></div>
+    <div style="margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.3));">
+    </div>
+    <div class="logo-text" style="font-size: 24px; display: flex; align-items: center; gap: 10px;">
+      Ecosystem Overview
+    </div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin-top: 8px;">Preparing technical architecture guide...</p>
+  </div>
+
+  <!-- Mouse Glow Cursor Container -->
+  <div id="mouse-glow"></div>
+
+  <!-- Ambient Glow Visual Effects -->
+  <div class="glowing-blob-1"></div>
+  <div class="glowing-blob-2"></div>
+
+  <!-- Navigation & Progress Tracking -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-block">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+          <img src="icon.png" alt="Influish Logo" style="width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.25)); border-radius: 6px;">
+          <div class="logo-text">Influish Tech</div>
+          <div class="logo-tag">Architecture</div>
+        </a>
+      </div>
+      
+      <div>
+        <a href="index.html" class="nav-back-btn">
+          <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> Back to Hub
+        </a>
+      </div>
+    </div>
+    
+    <!-- Top Progress Line -->
+    <div class="progress-bar-container">
+      <div id="scroll-progress"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="doc-hero-sec">
+    <div class="reveal visible">
+      <span class="section-label">Ecosystem Core</span>
+      <h1 class="hero-main-title" style="font-size: 48px; margin-bottom: 16px;">
+        <span class="gradient-text-purple-cyan">Ecosystem & Backend Overview</span>
+      </h1>
+      <p class="hero-tag" style="font-size: 16px; max-width: 700px; margin-bottom: 16px;">
+        A scalable, strictly-typed, and modular core API server built with **NestJS** that powers the entire Influish ecosystem.
+      </p>
+      
+      <div class="doc-alert alert-note" style="max-width: 750px; margin: 24px auto 0; text-align: left;">
+        <div class="doc-alert-icon"><i data-lucide="info"></i></div>
+        <div class="doc-alert-content">
+          <div class="doc-alert-title">Core Mission</div>
+          <div class="doc-alert-desc">
+            The backend serves as a robust central coordinator managing data feeds, automation engines, payment routes, and real-time operations between mobile systems and administrative panels.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Grid -->
+  <div class="doc-layout-grid">
+    
+    <!-- Sidebar navigation -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-title">Sections</div>
+      <ul class="doc-sidebar-menu">
+        <li>
+          <a href="#intro" class="doc-sidebar-link active">
+            <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Introduction
+          </a>
+        </li>
+        <li>
+          <a href="#capabilities" class="doc-sidebar-link">
+            <i data-lucide="zap" style="width: 16px; height: 16px;"></i> Key Capabilities
+          </a>
+        </li>
+        <li>
+          <a href="#techstack" class="doc-sidebar-link">
+            <i data-lucide="cpu" style="width: 16px; height: 16px;"></i> Tech Stack
+          </a>
+        </li>
+        <li>
+          <a href="#patterns" class="doc-sidebar-link">
+            <i data-lucide="git-branch" style="width: 16px; height: 16px;"></i> Design Patterns
+          </a>
+        </li>
+        <li>
+          <a href="#quality" class="doc-sidebar-link">
+            <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i> Code Quality & CI/CD
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="doc-main-content">
+      
+      <!-- Introduction -->
+      <section id="intro" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="book-open" style="color: var(--accent-purple);"></i> Introduction
+        </h2>
+        <p class="doc-text">
+          Influish Backend is the central orchestration layer connecting all interfaces in the Influish product pipeline. It manages APIs consumed by the cross-platform Flutter application and the internal React operations panel, and supports WebSocket protocols to enable instantaneous, persistent messaging features.
+        </p>
+        <p class="doc-text">
+          By isolating business logic into highly modular services, our backend enables rapid iteration on campaign tools, KYC flows, and payment triggers, without compromising scalability or runtime speed.
+        </p>
+        
+        <div class="ecosystem-grid" style="grid-template-cols: 1fr; gap: 16px; margin-top: 24px;">
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="smartphone" style="color: var(--accent-purple);"></i></div>
+            <div>
+              <h4 class="split-item-title">Mobile App Integration</h4>
+              <p class="split-item-desc">Supports JSON/REST endpoints consumed by the Flutter application to stream campaign listings, withdraw payouts, and verify social profiles.</p>
+            </div>
+          </div>
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="shield-check" style="color: var(--accent-cyan);"></i></div>
+            <div>
+              <h4 class="split-item-title">Admin Panel Integration</h4>
+              <p class="split-item-desc">Direct database gateways feeding statistical aggregations, dispute details, KYC file review boards, and transaction audit trails to the React operations dashboard.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Capabilities -->
+      <section id="capabilities" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="zap" style="color: var(--accent-cyan);"></i> Key Capabilities
+        </h2>
+        <p class="doc-text">
+          The backend services are strictly split into decoupled structural domains to prevent state bleeding and simplify team-wide collaboration. Below is a structured summary of core system capabilities:
+        </p>
+
+        <div class="doc-table-wrapper">
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Domain</th>
+                <th>Core Technical Capabilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="doc-highlight">🔐 Auth & Security</strong></td>
+                <td>JWT authorization pipelines, multi-tenant Firebase Auth synchronization, Role-Based Access Control (RBAC) layers (Admin, Brand, Influencer), and securely signed API gateways.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">👥 User Management</strong></td>
+                <td>Multi-role account metadata profiles, OAuth 2.0 social integrations, secure AWS S3/Firebase Storage KYC document vaults, and system activity auditing.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">🎯 Campaign System</strong></td>
+                <td>AI-assisted brief generators powered by custom OpenAI models, matching vectors for database influencer profiles, and campaign state transition tracking.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">💬 Real-Time Comm</strong></td>
+                <td>Duplex Socket.IO handshake layers, low-latency room multiplexing, automated chat storage models, and FCM push notifications on system updates.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">💳 Payment & Wallet</strong></td>
+                <td>Dual payment gateway integration utilizing Razorpay and Cashfree SDKs, virtual balance ledgers, secure automated bank transfer routes, and atomic wallet transfers.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">📊 Observability</strong></td>
+                <td>OpenTelemetry instrumentation, SigNoz performance traces mapping slower database connections, custom slow HTTP endpoint triggers, and Winston structured log streams.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">🤖 DM Automation</strong></td>
+                <td>Asynchronous execution queues backed by BullMQ and Redis storage, handling high-volume Instagram messaging webhooks with precise rate-limiting controllers.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section id="techstack" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="cpu" style="color: var(--accent-pink);"></i> Tech Stack
+        </h2>
+        <p class="doc-text">
+          We leverage a modern, lightweight, highly active Node.js and TypeScript environment to ensure complete type safety from controller request interfaces down to database schema representations.
+        </p>
+
+        <div class="ecosystem-grid" style="grid-template-cols: 1fr; gap: 16px; margin-top: 24px;">
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03);">
+            <h4 class="team-role" style="color: var(--accent-purple); font-size: 15px;">Core Engine</h4>
+            <ul class="doc-list" style="margin-bottom: 0;">
+              <li class="doc-list-item"><strong>NestJS & Express:</strong> The core framework providing structural boundaries, automatic module loading, dependency injection, and HTTP route binding.</li>
+              <li class="doc-list-item"><strong>TypeScript:</strong> Strongly-typed compiler variables representing models, preventing runtime casting mismatches.</li>
+            </ul>
+          </div>
+          
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03);">
+            <h4 class="team-role" style="color: var(--accent-cyan); font-size: 15px;">Data & Memory</h4>
+            <ul class="doc-list" style="margin-bottom: 0;">
+              <li class="doc-list-item"><strong>PostgreSQL:</strong> Highly reliable, relational ACID database handling transaction registers and user balances.</li>
+              <li class="doc-list-item"><strong>Prisma ORM:</strong> Next-generation database mapping toolkit, generating exact TypeScript interfaces directly from sql migration schemas.</li>
+              <li class="doc-list-item"><strong>Redis & BullMQ:</strong> High-performance in-memory cache and non-blocking job coordinator representing robust asynchronous background pipelines.</li>
+            </ul>
+          </div>
+          
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03);">
+            <h4 class="team-role" style="color: var(--accent-pink); font-size: 15px;">Integration Channels</h4>
+            <ul class="doc-list" style="margin-bottom: 0;">
+              <li class="doc-list-item"><strong>AWS S3 & Firebase:</strong> Decentralized cloud file storage buckets and OAuth verification systems.</li>
+              <li class="doc-list-item"><strong>OpenAI:</strong> LLM integrations optimizing text content extraction and brief drafts.</li>
+              <li class="doc-list-item"><strong>Razorpay & Cashfree:</strong> Bank clearing gateways delivering real-time payout capabilities.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture Patterns -->
+      <section id="patterns" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="git-branch" style="color: var(--accent-emerald);"></i> Design Patterns
+        </h2>
+        <p class="doc-text">
+          To maintain strict structural modularity and prevent complex domain coupling as the platform grows, we mandate specific object-oriented design standards across all modules:
+        </p>
+
+        <ul class="doc-list">
+          <li class="doc-list-item">
+            <strong>Domain-Driven Design (DDD):</strong> Code is segregated into independent folder boundaries mapping to business domains (e.g. <code>/auth</code>, <code>/campaign</code>, <code>/wallet</code>). Database entities and logical controllers do not cross domain files directly.
+          </li>
+          <li class="doc-list-item">
+            <strong>Clean Architecture:</strong> Separation of core layers ensures database structures (Prisma clients) can be modified without altering primary controller validations or route definitions.
+          </li>
+          <li class="doc-list-item">
+            <strong>CQRS (Command Query Responsibility Segregation):</strong> Separation of write-side transaction inputs (Commands) from read-side dashboards queries (Queries) to maximize system scalability under heavy query traffic.
+          </li>
+          <li class="doc-list-item">
+            <strong>Event-Driven Pipelines:</strong> State transitions (e.g., campaign creation or payment success) publish event hooks processed asynchronously by Redis-backed workers, preventing system request stalling.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Code Quality & CI/CD -->
+      <section id="quality" class="doc-section card-glass" style="padding: 32px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="shield-check" style="color: var(--accent-amber);"></i> Code Quality & CI/CD
+        </h2>
+        <p class="doc-text">
+          A robust suite of Git checking tools guarantees that no unformatted, non-compiling, or untested source files are ever integrated into the core branches.
+        </p>
+
+        <div class="split-view-container" style="grid-template-cols: 1fr; gap: 16px;">
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="anchor" style="color: var(--accent-amber);"></i></div>
+            <div>
+              <h4 class="split-item-title">Husky Git Hooks</h4>
+              <p class="split-item-desc">Runs pre-commit checking rules blocking files if basic ESLint checks, Prettier style guide definitions, or TSC compilations encounter problems.</p>
+            </div>
+          </div>
+          
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="terminal" style="color: var(--accent-amber);"></i></div>
+            <div>
+              <h4 class="split-item-title">Conventional Commit Validation</h4>
+              <p class="split-item-desc">Mandates standardized, readable descriptions (e.g. <code>feat(wallet): trigger payout webhook</code> or <code>fix(chat): handle socket disconnect</code>) to auto-generate release changes logs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <footer style="padding: 40px 24px; text-align: center; border-top: 1px solid var(--border-light); margin-top: 80px;">
+    <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 24px; height: 24px; object-fit: contain;">
+      <span style="font-weight: 600; font-family: var(--font-display); font-size: 13.5px; color: var(--color-text-secondary);">Influish Engineering Hub</span>
+    </div>
+  </footer>
+
+  <script>
+    // Local script to toggle active sidebar section on scroll
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".doc-section");
+      const navLinks = document.querySelectorAll(".doc-sidebar-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

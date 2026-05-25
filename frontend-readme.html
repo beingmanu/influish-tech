@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mobile App Guide — Influish Tech Hub</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Logic Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Startup Loader Curtain -->
+  <div id="loading-curtain">
+    <div class="loader-spinner"></div>
+    <div style="margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.3));">
+    </div>
+    <div class="logo-text" style="font-size: 24px; display: flex; align-items: center; gap: 10px;">
+      Frontend Mobile App
+    </div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin-top: 8px;">Preparing Flutter developer orientation portal...</p>
+  </div>
+
+  <!-- Mouse Glow Cursor Container -->
+  <div id="mouse-glow"></div>
+
+  <!-- Ambient Glow Visual Effects -->
+  <div class="glowing-blob-1"></div>
+  <div class="glowing-blob-2"></div>
+
+  <!-- Navigation & Progress Tracking -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-block">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+          <img src="icon.png" alt="Influish Logo" style="width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.25)); border-radius: 6px;">
+          <div class="logo-text">Influish Tech</div>
+          <div class="logo-tag">Flutter App</div>
+        </a>
+      </div>
+      
+      <div>
+        <a href="index.html" class="nav-back-btn">
+          <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> Back to Hub
+        </a>
+      </div>
+    </div>
+    
+    <!-- Top Progress Line -->
+    <div class="progress-bar-container">
+      <div id="scroll-progress"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="doc-hero-sec">
+    <div class="reveal visible">
+      <span class="section-label">Client Development</span>
+      <h1 class="hero-main-title" style="font-size: 48px; margin-bottom: 16px;">
+        <span class="gradient-text-purple-cyan">Flutter Mobile App Onboarding</span>
+      </h1>
+      <p class="hero-tag" style="font-size: 16px; max-width: 750px; margin-bottom: 16px;">
+        Setup instructions, architectural folder structures, state management patterns, and development guidelines for the **Influish** cross-platform mobile application.
+      </p>
+      
+      <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px;">
+        <div class="card-glass" style="padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(139, 92, 246, 0.2);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-purple);"></span> Flutter 3.3.4+
+        </div>
+        <div class="card-glass" style="padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-cyan);"></span> Bloc / Riverpod
+        </div>
+        <div class="card-glass" style="padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(236, 72, 153, 0.2);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-pink);"></span> Retrofit & SQLite
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Grid -->
+  <div class="doc-layout-grid">
+    
+    <!-- Sidebar navigation -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-title">Navigation</div>
+      <ul class="doc-sidebar-menu">
+        <li>
+          <a href="#overview" class="doc-sidebar-link active">
+            <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Overview & Features
+          </a>
+        </li>
+        <li>
+          <a href="#techstack" class="doc-sidebar-link">
+            <i data-lucide="cpu" style="width: 16px; height: 16px;"></i> Tech Stack Setup
+          </a>
+        </li>
+        <li>
+          <a href="#setup" class="doc-sidebar-link">
+            <i data-lucide="terminal" style="width: 16px; height: 16px;"></i> Installation & Setup
+          </a>
+        </li>
+        <li>
+          <a href="#architecture" class="doc-sidebar-link">
+            <i data-lucide="folder-tree" style="width: 16px; height: 16px;"></i> Folder Architecture
+          </a>
+        </li>
+        <li>
+          <a href="#guidelines" class="doc-sidebar-link">
+            <i data-lucide="file-code-2" style="width: 16px; height: 16px;"></i> Coding Guidelines
+          </a>
+        </li>
+        <li>
+          <a href="#contributing" class="doc-sidebar-link">
+            <i data-lucide="users-2" style="width: 16px; height: 16px;"></i> Contributing Guide
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="doc-main-content">
+      
+      <!-- Overview & Features -->
+      <section id="overview" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="book-open" style="color: var(--accent-purple);"></i> Overview & Features
+        </h2>
+        <p class="doc-text">
+          The <strong>Influish Mobile App</strong> is a high-performance cross-platform Flutter application powering brand and influencer connections. By adopting a unified client repository compiled for both iOS and Android, our code guarantees synchronized features and pixel-perfect design alignment.
+        </p>
+        <p class="doc-text">
+          The application runs two distinct user workflows inside a single build package:
+        </p>
+
+        <div class="ecosystem-grid" style="grid-template-cols: 1fr; gap: 16px;">
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03);">
+            <h4 class="team-role" style="color: var(--accent-purple); font-size: 15px;"><i data-lucide="award" class="inline-icon" style="color: var(--accent-purple);"></i> For Influencers</h4>
+            <ul class="doc-list" style="margin-top: 8px; margin-bottom: 0;">
+              <li class="doc-list-item"><strong>Campaign Discovery:</strong> Filter niche categories and apply directly to matching campaign boards.</li>
+              <li class="doc-list-item"><strong>Metrics Tracker:</strong> View views, clicks, engagement metrics, and payment summaries.</li>
+              <li class="doc-list-item"><strong>Wallet Ledger:</strong> Initiate withdrawals, audit payouts, and track bank reconciliations.</li>
+              <li class="doc-list-item"><strong>Identity Upload:</strong> Complete secure profile verification with image-croppers.</li>
+            </ul>
+          </div>
+          
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03);">
+            <h4 class="team-role" style="color: var(--accent-cyan); font-size: 15px;"><i data-lucide="building" class="inline-icon" style="color: var(--accent-cyan);"></i> For Brands</h4>
+            <ul class="doc-list" style="margin-top: 8px; margin-bottom: 0;">
+              <li class="doc-list-item"><strong>Campaign Builder:</strong> Fast form templates with inline AI assistance mapping briefs.</li>
+              <li class="doc-list-item"><strong>Creator Review Board:</strong> Approve applied content uploads or negotiate revisions.</li>
+              <li class="doc-list-item"><strong>Instant Transactions:</strong> Process campaigns locks via Razorpay/Cashfree gates.</li>
+              <li class="doc-list-item"><strong>Aggregated Analytics:</strong> Track click conversions and ROI charts.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="doc-alert alert-tip" style="margin-top: 24px;">
+          <div class="doc-alert-icon"><i data-lucide="sparkles"></i></div>
+          <div class="doc-alert-content">
+            <div class="doc-alert-title">Common Utilities</div>
+            <div class="doc-alert-desc">
+              Both systems share real-time Socket.IO chat windows, background notifications via FCM, offline caches (Floor SQLite), and multi-language routing definitions (GoRouter).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section id="techstack" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="cpu" style="color: var(--accent-cyan);"></i> Tech Stack & Libraries
+        </h2>
+        <p class="doc-text">
+          Our client architecture isolates business processes into distinct layers. Below is the production list of packages required to build and deploy:
+        </p>
+
+        <div class="doc-table-wrapper">
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th style="width: 30%;">Category</th>
+                <th>Dependencies & Packages</th>
+                <th>Main Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="doc-highlight">State Management</strong></td>
+                <td><code>hooks_riverpod</code>, <code>flutter_bloc</code>, <code>hydrated_bloc</code></td>
+                <td>Manages asynchronous queries, global auth configurations, and handles user workflow state transitions.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">API & Database</strong></td>
+                <td><code>dio</code>, <code>retrofit</code>, <code>floor</code> (SQLite)</td>
+                <td>Type-safe REST operations, interceptors managing auth headers, and local offline cache synchronization.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Responsive UI</strong></td>
+                <td><code>flutter_screenutil</code>, <code>flutter_svg</code>, <code>lottie</code>, <code>shimmer</code></td>
+                <td>Pixel-perfect layouts across different viewport heights, raw vectors, and high-fidelity loading overlays.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Integrations</strong></td>
+                <td><code>razorpay_flutter</code>, <code>flutter_cashfree_pg_sdk</code></td>
+                <td>Native payment gateways triggered directly inside wallet checkouts.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Cloud Services</strong></td>
+                <td><code>firebase_core</code>, <code>firebase_messaging</code></td>
+                <td>Push alerts, campaign reminders, and deep link integrations.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Utilities</strong></td>
+                <td><code>go_router</code>, <code>get_it</code>, <code>permission_handler</code></td>
+                <td>Declarative application routing, dependency injection registers, and hardware permission filters.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Observability</strong></td>
+                <td><code>sentry_flutter</code>, <code>mixpanel_flutter</code></td>
+                <td>Automated bug logs reporting, conversion metrics profiling, and performance auditing.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Installation & Setup -->
+      <section id="setup" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="terminal" style="color: var(--accent-pink);"></i> Installation & Setup
+        </h2>
+        <p class="doc-text">
+          New developers must follow these consecutive terminal commands to configure and compile the mobile client:
+        </p>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">1. Dependencies Installation</h4>
+        <p class="doc-text" style="font-size: 13.5px; margin-bottom: 8px;">Navigate into the project directory and retrieve package listings:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span>Terminal (Bash)</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code>cd influish/frontend_app
+flutter pub get</code></pre>
+        </div>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">2. Run Code Generation</h4>
+        <p class="doc-text" style="font-size: 13.5px; margin-bottom: 8px;">Trigger build_runner to parse abstract Retrofit endpoints and Floor databases:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span>Terminal (Bash)</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code>flutter packages pub run build_runner build --delete-conflicting-outputs</code></pre>
+        </div>
+
+        <div class="doc-alert alert-warning">
+          <div class="doc-alert-icon"><i data-lucide="alert-triangle"></i></div>
+          <div class="doc-alert-content">
+            <div class="doc-alert-title">Code Generation Requirement</div>
+            <div class="doc-alert-desc">
+              Any structural model updates or API endpoint modifications mandate running the generator. Keep `watch` active in a background terminal during active code changes: <br>
+              <code>flutter packages pub run build_runner watch</code>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">3. Compile & Run</h4>
+        <p class="doc-text" style="font-size: 13.5px; margin-bottom: 8px;">Launch development compilation targeting local devices:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span>Terminal (Bash)</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code># Android Emulator or Physical Device
+flutter run --flavor dev -t lib/main.dart
+
+# iOS Simulator or Physical Device  
+flutter run --flavor dev -t lib/main.dart -d ios</code></pre>
+        </div>
+      </section>
+
+      <!-- Folder Architecture -->
+      <section id="architecture" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="folder-tree" style="color: var(--accent-emerald);"></i> Folder Architecture
+        </h2>
+        <p class="doc-text">
+          The project code structure segregates layers into <strong>features</strong> and <strong>domains</strong>, keeping layout implementations fully separate from data operations. Here is a high-level visual map:
+        </p>
+
+        <div class="dir-tree-box">
+          <div><span class="dir-tree-item-dir">lib/</span></div>
+          <div>├── <span class="dir-tree-item-file">main.dart</span> <span class="dir-tree-comment">// App launch entry point</span></div>
+          <div>├── <span class="dir-tree-item-file">app_root.dart</span> <span class="dir-tree-comment">// App shell, routers and themes load</span></div>
+          <div>└── <span class="dir-tree-item-dir">src/</span></div>
+          <div>    ├── <span class="dir-tree-item-dir">config/</span> <span class="dir-tree-comment">// Navigation structures and CSS themes</span></div>
+          <div>    ├── <span class="dir-tree-item-dir">utils/</span> <span class="dir-tree-comment">// Share color schemes, local data keys and extensions</span></div>
+          <div>    ├── <span class="dir-tree-item-dir">common/</span> <span class="dir-tree-comment">// Shared UI cards, common loaders, and generic network models</span></div>
+          <div>    │   ├── <span class="dir-tree-item-dir">blocs/</span> <span class="dir-tree-comment">// Global session blocs (e.g. auth status, balances)</span></div>
+          <div>    │   └── <span class="dir-tree-item-dir">widgets/</span> <span class="dir-tree-comment">// Global reusable button components</span></div>
+          <div>    ├── <span class="dir-tree-item-dir">presentation/</span> <span class="dir-tree-comment">// Graphical UI screens grouped by roles</span></div>
+          <div>    │   ├── <span class="dir-tree-item-dir">influencer/</span> <span class="dir-tree-comment">// Influencer explore tab, details and wallet views</span></div>
+          <div>    │   └── <span class="dir-tree-item-dir">brand/</span> <span class="dir-tree-comment">// Brand campaigns setup panel</span></div>
+          <div>    ├── <span class="dir-tree-item-dir">domain/</span> <span class="dir-tree-comment">// Pure interfaces, domain models and entities</span></div>
+          <div>    │   ├── <span class="dir-tree-item-dir">influencer/</span> <span class="dir-tree-comment">// Core data models for influencer flows</span></div>
+          <div>    │   └── <span class="dir-tree-item-dir">brand/</span> <span class="dir-tree-comment">// Campaign structure models</span></div>
+          <div>    └── <span class="dir-tree-item-dir">data/</span> <span class="dir-tree-comment">// Repository implementations and SQLite local data controllers</span></div>
+          <div>        ├── <span class="dir-tree-item-dir">influencer/</span> <span class="dir-tree-comment">// Remote network calls for influencers</span></div>
+          <div>        └── <span class="dir-tree-item-dir">brand/</span> <span class="dir-tree-comment">// Brand remote campaigns interfaces</span></div>
+        </div>
+
+        <ul class="doc-list" style="margin-top: 24px;">
+          <li class="doc-list-item"><strong>Domain Layer:</strong> Holds raw model representations (no network or json serialization annotations). This represents pure business guidelines.</li>
+          <li class="doc-list-item"><strong>Data Layer:</strong> Houses network files, Retrofit endpoints, JSON deserialization logic, and database caches.</li>
+          <li class="doc-list-item"><strong>Presentation Layer:</strong> Houses views, responsive widgets, and logic blocks mapping local states (e.g. <code>StateNotifier</code> or <code>BLoC</code>).</li>
+        </ul>
+      </section>
+
+      <!-- Coding Guidelines -->
+      <section id="guidelines" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="file-code-2" style="color: var(--accent-purple);"></i> Coding Guidelines
+        </h2>
+        <p class="doc-text">
+          To maintain high code clarity and minimize merge disputes, all developers must adhere to these coding paradigms:
+        </p>
+
+        <ul class="doc-list">
+          <li class="doc-list-item">
+            <strong>Strong Type Checking:</strong> Do not use dynamic typings. Declare type outputs for all API payloads, routes parameters, and state notifier actions.
+          </li>
+          <li class="doc-list-item">
+            <strong>Formatting:</strong> Run `dart format .` before staging changes. Unformatted layout code will be rejected during automatic pre-commit runs.
+          </li>
+          <li class="doc-list-item">
+            <strong>Resource Constraints:</strong> Wrap responsive cards inside ScreenUtil definitions (e.g. <code>.w</code>, <code>.h</code>, <code>.sp</code>) to prevent pixel clippings on compact displays.
+          </li>
+          <li class="doc-list-item">
+            <strong>Optimizations:</strong> Mark static UI blocks with <code>const</code> constructors. Use image caches for external network avatars to prevent repetitive resource fetches.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contributing Guide -->
+      <section id="contributing" class="doc-section card-glass" style="padding: 32px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="users-2" style="color: var(--accent-cyan);"></i> Contributing Guide
+        </h2>
+        <p class="doc-text">
+          All developers push custom code branches under a structured, peer-reviewed Git setup:
+        </p>
+
+        <div class="split-view-container" style="grid-template-cols: 1fr; gap: 16px;">
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="git-branch" style="color: var(--accent-cyan);"></i></div>
+            <div>
+              <h4 class="split-item-title">1. Feature Branches</h4>
+              <p class="split-item-desc">Create small features branches with descriptive handles: <br><code>git checkout -b feature/campaign-ai-generator</code></p>
+            </div>
+          </div>
+
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="zoom-in" style="color: var(--accent-cyan);"></i></div>
+            <div>
+              <h4 class="split-item-title">2. Local Linting Runs</h4>
+              <p class="split-item-desc">Review lint warnings locally before staging: <br><code>flutter analyze && flutter test</code></p>
+            </div>
+          </div>
+
+          <div class="split-item" style="padding: 16px; background-color: rgba(255, 255, 255, 0.01);">
+            <div class="split-item-icon"><i data-lucide="git-pull-request" style="color: var(--accent-cyan);"></i></div>
+            <div>
+              <h4 class="split-item-title">3. Peer Review Integration</h4>
+              <p class="split-item-desc">Open a Pull Request with a clear changelog description. Target branches require a minimum of two peer reviews before master branch integration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <footer style="padding: 40px 24px; text-align: center; border-top: 1px solid var(--border-light); margin-top: 80px;">
+    <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 24px; height: 24px; object-fit: contain;">
+      <span style="font-weight: 600; font-family: var(--font-display); font-size: 13.5px; color: var(--color-text-secondary);">Influish Engineering Hub</span>
+    </div>
+  </footer>
+
+  <script>
+    // Copy code button controller
+    function copyCode(button) {
+      const codeBlock = button.parentElement.nextElementSibling.querySelector('code');
+      const textToCopy = codeBlock.innerText;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i data-lucide="check" style="width: 12px; height: 12px;"></i> Copied!';
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+        button.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+        button.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+        button.style.color = 'var(--accent-emerald)';
+
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+          button.style.backgroundColor = '';
+          button.style.borderColor = '';
+          button.style.color = '';
+        }, 2000);
+      });
+    }
+
+    // Scroll active link controller
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".doc-section");
+      const navLinks = document.querySelectorAll(".doc-sidebar-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

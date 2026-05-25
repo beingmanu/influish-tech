@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend API Engine Guide — Influish Tech Hub</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Logic Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Startup Loader Curtain -->
+  <div id="loading-curtain">
+    <div class="loader-spinner"></div>
+    <div style="margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.3));">
+    </div>
+    <div class="logo-text" style="font-size: 24px; display: flex; align-items: center; gap: 10px;">
+      Backend Core Engine
+    </div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin-top: 8px;">Preparing NestJS developer orientation portal...</p>
+  </div>
+
+  <!-- Mouse Glow Cursor Container -->
+  <div id="mouse-glow"></div>
+
+  <!-- Ambient Glow Visual Effects -->
+  <div class="glowing-blob-1"></div>
+  <div class="glowing-blob-2"></div>
+
+  <!-- Navigation & Progress Tracking -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-block">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+          <img src="icon.png" alt="Influish Logo" style="width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.25)); border-radius: 6px;">
+          <div class="logo-text">Influish Tech</div>
+          <div class="logo-tag">NestJS Core</div>
+        </a>
+      </div>
+      
+      <div>
+        <a href="index.html" class="nav-back-btn">
+          <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> Back to Hub
+        </a>
+      </div>
+    </div>
+    
+    <!-- Top Progress Line -->
+    <div class="progress-bar-container">
+      <div id="scroll-progress"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="doc-hero-sec">
+    <div class="reveal visible">
+      <span class="section-label">Server Development</span>
+      <h1 class="hero-main-title" style="font-size: 48px; margin-bottom: 16px;">
+        <span class="gradient-text-purple-cyan">Backend API Engine Guide</span>
+      </h1>
+      <p class="hero-tag" style="font-size: 16px; max-width: 750px; margin-bottom: 16px;">
+        Database migrations, JWT security, payment gateway configurations, Redis/BullMQ job queues, and OpenTelemetry instrumentation for the NestJS API engine.
+      </p>
+      
+      <div style="display: flex; gap: 12px; justify-content: center; margin-top: 24px;">
+        <div class="card-glass" style="padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(139, 92, 246, 0.2);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-purple);"></span> NestJS 10.0+
+        </div>
+        <div class="card-glass" style="padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(6, 182, 212, 0.2);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-cyan);"></span> Prisma & Postgres
+        </div>
+        <div class="card-glass" style="padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(236, 72, 153, 0.2);">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--accent-pink);"></span> Redis / BullMQ
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Grid -->
+  <div class="doc-layout-grid">
+    
+    <!-- Sidebar navigation -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-title">Navigation</div>
+      <ul class="doc-sidebar-menu">
+        <li>
+          <a href="#overview" class="doc-sidebar-link active">
+            <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Overview & Features
+          </a>
+        </li>
+        <li>
+          <a href="#techstack" class="doc-sidebar-link">
+            <i data-lucide="cpu" style="width: 16px; height: 16px;"></i> Technical Stack
+          </a>
+        </li>
+        <li>
+          <a href="#env" class="doc-sidebar-link">
+            <i data-lucide="file-key" style="width: 16px; height: 16px;"></i> Environment Config
+          </a>
+        </li>
+        <li>
+          <a href="#database" class="doc-sidebar-link">
+            <i data-lucide="database" style="width: 16px; height: 16px;"></i> Database Setup
+          </a>
+        </li>
+        <li>
+          <a href="#architecture" class="doc-sidebar-link">
+            <i data-lucide="folder-tree" style="width: 16px; height: 16px;"></i> Folder Structure
+          </a>
+        </li>
+        <li>
+          <a href="#git" class="doc-sidebar-link">
+            <i data-lucide="git-merge" style="width: 16px; height: 16px;"></i> Git Commit Workflow
+          </a>
+        </li>
+        <li>
+          <a href="#monitoring" class="doc-sidebar-link">
+            <i data-lucide="activity" style="width: 16px; height: 16px;"></i> Monitoring & Logging
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="doc-main-content">
+      
+      <!-- Overview & Features -->
+      <section id="overview" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="book-open" style="color: var(--accent-purple);"></i> Overview & Features
+        </h2>
+        <p class="doc-text">
+          The <strong>Influish Backend</strong> is a scalable, strictly-typed API service engineered on top of the progressive **NestJS** framework. It acts as the transaction processor and data orchestrator for both our Flutter mobile client and React dashboard panels.
+        </p>
+        <p class="doc-text">
+          Our backend engine handles several enterprise-grade operational workflows:
+        </p>
+
+        <ul class="doc-list">
+          <li class="doc-list-item"><strong>Authentication & Guard Gates:</strong> Combines NestJS passport JWT validation routes with direct multi-role firebase admin scopes checking (Brand, Influencer, Admin).</li>
+          <li class="doc-list-item"><strong>Payment Clearances:</strong> Handles Razorpay and Cashfree checkout sessions, atomic database wallet locks, and webhook clearing logic.</li>
+          <li class="doc-list-item"><strong>Real-time Socket Rooms:</strong> Low-latency chat routing built with Socket.IO multiplexing layers.</li>
+          <li class="doc-list-item"><strong>Asynchronous Messaging:</strong> Instagram DM triggers and push notifications processes decoupled via non-blocking BullMQ/Redis worker pipelines.</li>
+        </ul>
+      </section>
+
+      <!-- Technical Stack -->
+      <section id="techstack" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="cpu" style="color: var(--accent-cyan);"></i> Technical Stack Mappings
+        </h2>
+        <p class="doc-text">
+          To maintain type safety down to the database schema level, we run strict Node package dependencies. Here is our core technology layout:
+        </p>
+
+        <div class="doc-table-wrapper">
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Domain Layer</th>
+                <th style="width: 40%;">Core Dependency Packages</th>
+                <th>Functional Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="doc-highlight">Server Engine</strong></td>
+                <td><code>@nestjs/core</code>, <code>typescript</code>, <code>express</code></td>
+                <td>Module dependency injections, DTO validations, and HTTP routing controllers.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Database Mapper</strong></td>
+                <td><code>prisma</code>, <code>@prisma/client</code></td>
+                <td>SQL migration compiles, models mappings, and database queries abstraction.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Task Queue</strong></td>
+                <td><code>bullmq</code>, <code>ioredis</code></td>
+                <td>Instagram webhook buffers, push alerts distribution, and chron jobs triggers.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Integrations</strong></td>
+                <td><code>nestjs-razorpay</code>, <code>cashfree-pg</code>, <code>openai</code>, <code>@aws-sdk/client-s3</code></td>
+                <td>Clearing bank gateways, AI prompts, and S3 KYC files storage.</td>
+              </tr>
+              <tr>
+                <td><strong class="doc-highlight">Observability</strong></td>
+                <td><code>@opentelemetry/api</code>, <code>winston</code>, <code>swagger-ui-express</code></td>
+                <td>SigNoz custom telemetry traces, structured logs, and auto-generated API pages.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Environment Config -->
+      <section id="env" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="file-key" style="color: var(--accent-pink);"></i> Environment Configuration
+        </h2>
+        <p class="doc-text">
+          Before compiling the backend module, developers must populate their local <code>.env</code> file. Below is a structured card template demonstrating expected configurations:
+        </p>
+
+        <div class="doc-code-block" style="background-color: #06060A;">
+          <div class="doc-code-header">
+            <span>Example .env Template</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code># Postgres Primary Connection
+DATABASE_URL="postgresql://influish_dev:secure_pass@localhost:5432/influish?schema=public"
+
+# JSON Web Tokens Secrets
+JWT_SECRET="influish-super-secure-token-engine-key"
+JWT_EXPIRES_IN="7d"
+
+# Firebase Cloud credentials
+FIREBASE_PROJECT_ID="influish-cloud"
+FIREBASE_CLIENT_EMAIL="admin@influish-cloud.iam.gserviceaccount.com"
+
+# Payment clearing API keys
+RAZORPAY_KEY_ID="rzp_test_keys"
+CASHFREE_APP_ID="cashfree_test_id"
+
+# In-Memory Cache URI
+REDIS_URI="redis://127.0.0.1:6379"
+
+# OpenAI LLM keys
+OPENAI_API_KEY="sk-proj-openai-key-params"
+
+# OpenTelemetry monitoring ports
+OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4318"
+OTEL_SERVICE_NAME_API="influish-nestjs-api"</code></pre>
+        </div>
+      </section>
+
+      <!-- Database Setup -->
+      <section id="database" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="database" style="color: var(--accent-emerald);"></i> Database Setup & Migrations
+        </h2>
+        <p class="doc-text">
+          Our Postgres schema mapping is driven entirely by Prisma. Developers pull fresh updates and seed models through these simple CLI sequences:
+        </p>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">1. Generate Local Prisma Types</h4>
+        <p class="doc-text" style="font-size: 13.5px; margin-bottom: 8px;">Run this command to build typescript queries abstractions based on current models:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span>Terminal (Bash)</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code>npx prisma generate</code></pre>
+        </div>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">2. Execute Database Migrations</h4>
+        <p class="doc-text" style="font-size: 13.5px; margin-bottom: 8px;">Apply database changes locally or on development servers:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span>Terminal (Bash)</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code>npx prisma migrate deploy</code></pre>
+        </div>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">3. Start Development Hot-Reload</h4>
+        <p class="doc-text" style="font-size: 13.5px; margin-bottom: 8px;">Launch NestJS application watch compilation processes:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span>Terminal (Bash)</span>
+            <button class="doc-code-copy-btn" onclick="copyCode(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
+            </button>
+          </div>
+          <pre class="doc-code-content"><code>npm run start:dev</code></pre>
+        </div>
+
+        <div class="doc-alert alert-tip">
+          <div class="doc-alert-icon"><i data-lucide="link"></i></div>
+          <div class="doc-alert-content">
+            <div class="doc-alert-title">Interactive API Playground</div>
+            <div class="doc-alert-desc">
+              Once NestJS boots successfully, access the Swagger API playground to execute query routes directly at: <code>http://localhost:3000/api</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Folder Structure -->
+      <section id="architecture" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="folder-tree" style="color: var(--accent-purple);"></i> Source Directory Structure
+        </h2>
+        <p class="doc-text">
+          The code modules are housed under `/src`, organized strictly by domains. Below is the folder mapping:
+        </p>
+
+        <div class="dir-tree-box">
+          <div><span class="dir-tree-item-dir">src/</span></div>
+          <div>├── <span class="dir-tree-item-file">main.ts</span> <span class="dir-tree-comment">// Bootstrap server, setups guards, starts OpenTelemetry</span></div>
+          <div>├── <span class="dir-tree-item-file">app.module.ts</span> <span class="dir-tree-comment">// Root modules managing domain loading</span></div>
+          <div>├── <span class="dir-tree-item-dir">auth/</span> <span class="dir-tree-comment">// JWT logins and Firebase synchronizations</span></div>
+          <div>├── <span class="dir-tree-item-dir">brand/</span> <span class="dir-tree-comment">// Brand operations and profile configurations</span></div>
+          <div>├── <span class="dir-tree-item-dir">influencer/</span> <span class="dir-tree-comment">// Influencer profiles and KYC validation queues</span></div>
+          <div>├── <span class="dir-tree-item-dir">campaign/</span> <span class="dir-tree-comment">// Campaigns CRUD operations and cron handlers</span></div>
+          <div>├── <span class="dir-tree-item-dir">chat/</span> <span class="dir-tree-comment">// low-latency Socket.IO gateway hubs</span></div>
+          <div>├── <span class="dir-tree-item-dir">wallet/</span> <span class="dir-tree-comment">// Atomic transactional ledgers and payouts</span></div>
+          <div>├── <span class="dir-tree-item-dir">notification/</span> <span class="dir-tree-comment">// Background FCM alert integrations</span></div>
+          <div>└── <span class="dir-tree-item-dir">instagram/</span> <span class="dir-tree-comment">// BullMQ asynchronous Instagram DM automation hooks</span></div>
+        </div>
+
+        <ul class="doc-list" style="margin-top: 24px;">
+          <li class="doc-list-item"><strong>Controllers:</strong> Standardize HTTP endpoint entries and call service layers.</li>
+          <li class="doc-list-item"><strong>Services:</strong> House business computations, entity validations, and database writes.</li>
+          <li class="doc-list-item"><strong>Modules:</strong> Decouple configurations and load required domain providers.</li>
+        </ul>
+      </section>
+
+      <!-- Git Commit Workflow -->
+      <section id="git" class="doc-section card-glass" style="padding: 32px; margin-bottom: 24px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="git-merge" style="color: var(--accent-cyan);"></i> Git Commit Workflow
+        </h2>
+        <p class="doc-text">
+          To enforce clean code quality before integrations, we set up **Husky** hooks on all local repositories. These hooks run automatic checks at specific git workflow stages:
+        </p>
+
+        <div class="ecosystem-grid" style="grid-template-cols: 1fr; gap: 16px;">
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03); justify-content: flex-start;">
+            <div class="cap-tech-badge"><i data-lucide="shield-alert"></i> Pre-commit Hook</div>
+            <p class="doc-text" style="font-size: 13px; margin-bottom: 0;">Triggered before commits compile. Runs Lint-staged to auto-fix styling errors and blocks commits if typescript compiler warnings exist.</p>
+          </div>
+          
+          <div class="team-card" style="background-color: rgba(255, 255, 255, 0.01); border-color: rgba(255, 255, 255, 0.03); justify-content: flex-start;">
+            <div class="cap-tech-badge" style="color: var(--accent-pink);"><i data-lucide="align-left"></i> Commit-msg Hook</div>
+            <p class="doc-text" style="font-size: 13px; margin-bottom: 0;">Enforces the Conventional Commit standard structure: <code>type(scope): description</code>. Messages violating this will be blocked.</p>
+          </div>
+        </div>
+
+        <h4 class="team-role" style="font-size: 14px; margin-top: 24px; color: var(--color-text-primary);">Conventional Commit Examples:</h4>
+        <div class="doc-table-wrapper" style="margin-top: 12px;">
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Commit Command</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>feat(auth): add google signin</code></td>
+                <td>Introducing a brand new auth endpoint feature.</td>
+              </tr>
+              <tr>
+                <td><code>fix(wallet): secure Razorpay webhook</code></td>
+                <td>Resolving a transaction validation bug.</td>
+              </tr>
+              <tr>
+                <td><code>docs(readme): add docker setup</code></td>
+                <td>Modifying system orientation documentation files.</td>
+              </tr>
+              <tr>
+                <td><code>refactor(chat): simplify socket auth</code></td>
+                <td>Restructuring code logic for cleaner execution.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Monitoring & Logging -->
+      <section id="monitoring" class="doc-section card-glass" style="padding: 32px;">
+        <h2 class="doc-section-title">
+          <i data-lucide="activity" style="color: var(--accent-pink);"></i> Monitoring & Observability
+        </h2>
+        <p class="doc-text">
+          Our active telemetry layer maps system latencies continuously, logging metric pipelines to prevent service bottlenecks:
+        </p>
+
+        <ul class="doc-list">
+          <li class="doc-list-item"><strong>Winston Structured Logging:</strong> Auto-formats server actions and error dumps, streaming structured log variables directly to analytics collectors.</li>
+          <li class="doc-list-item"><strong>OpenTelemetry Instrumentation:</strong> Automatically profiles database operations speeds and slow endpoints.</li>
+          <li class="doc-list-item"><strong>SigNoz Dashboard Portal:</strong> Aggregates system metrics, highlighting latencies crossing limits (e.g. database transactions taking >200ms).</li>
+        </ul>
+      </section>
+      
+    </main>
+  </div>
+
+  <footer style="padding: 40px 24px; text-align: center; border-top: 1px solid var(--border-light); margin-top: 80px;">
+    <div style="display: flex; align-items: center; gap: 12px; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 24px; height: 24px; object-fit: contain;">
+      <span style="font-weight: 600; font-family: var(--font-display); font-size: 13.5px; color: var(--color-text-secondary);">Influish Engineering Hub</span>
+    </div>
+  </footer>
+
+  <script>
+    // Copy code helper
+    function copyCode(button) {
+      const codeBlock = button.parentElement.nextElementSibling.querySelector('code');
+      const textToCopy = codeBlock.innerText;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i data-lucide="check" style="width: 12px; height: 12px;"></i> Copied!';
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+        button.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+        button.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+        button.style.color = 'var(--accent-emerald)';
+
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+          }
+          button.style.backgroundColor = '';
+          button.style.borderColor = '';
+          button.style.color = '';
+        }, 2000);
+      });
+    }
+
+    // Scroll active link trigger
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".doc-section");
+      const navLinks = document.querySelectorAll(".doc-sidebar-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (pageYOffset >= (sectionTop - 150)) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
