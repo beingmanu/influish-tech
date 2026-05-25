@@ -1,0 +1,8 @@
+# Ignore files containing questions, answers, and assessments
+*questions.md
+*answers.md
+*assessment.md
+tech_questions.md
+simple_questions.md
+simple_answers.md
+onboarding_assessment.md

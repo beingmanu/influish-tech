@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influish Tech Ecosystem — Tech Onboarding & Presentation</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Mermaid JS for Visual Workflows -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        background: 'transparent',
+        primaryColor: '#1F1F2E',
+        primaryTextColor: '#FFFFFF',
+        primaryBorderColor: 'rgba(255, 255, 255, 0.08)',
+        lineColor: '#EC4899',
+        secondaryColor: '#0B0B0F',
+        tertiaryColor: '#12121A'
+      }
+    });
+  </script>
+  
+  <!-- Custom Logic Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Startup Loader Curtain -->
+  <div id="loading-curtain">
+    <div class="loader-spinner"></div>
+    <div style="margin-bottom: 24px; display: flex; align-items: center; justify-content: center;">
+      <img src="icon.png" alt="Influish Logo" style="width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.3));">
+    </div>
+    <div class="logo-text" style="font-size: 24px; display: flex; align-items: center; gap: 10px;">
+      Influish Tech Onboarding
+    </div>
+    <p style="font-size: 13px; color: var(--color-text-secondary); margin-top: 8px;">Preparing visual keynote presentation...</p>
+  </div>
+
+  <!-- Mouse Glow Cursor Container -->
+  <div id="mouse-glow"></div>
+
+  <!-- Ambient Glow Visual Effects -->
+  <div class="glowing-blob-1"></div>
+  <div class="glowing-blob-2"></div>
+
+  <!-- Navigation & Progress Tracking -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-block">
+        <img src="icon.png" alt="Influish Logo" style="width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.25)); border-radius: 6px;">
+        <div class="logo-text">Influish Tech</div>
+        <div class="logo-tag">Product Onboarding</div>
+      </div>
+      
+      <!-- System Uptime Indicator from Staging/Production guidelines -->
+      <div class="logo-block" style="font-size: 12px; color: var(--accent-emerald); font-weight: 600;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background-color: var(--accent-emerald); display: inline-block;"></span>
+        Active Observability Stream
+      </div>
+    </div>
+    
+    <!-- Top Progress Line -->
+    <div class="progress-bar-container">
+      <div id="scroll-progress"></div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-sec">
+    <div class="reveal">
+      <span class="section-label">System Overview</span>
+      <h1 class="hero-main-title">
+        <span class="gradient-text-purple-cyan">Influish Tech Ecosystem</span>
+      </h1>
+      <p class="hero-tag">
+        A deep-dive product and technical orientation guide designed to foster seamless alignment and high-fidelity collaboration between **Product Development (PD)**, **Business Development (BD)**, and the **Tech Team**.
+      </p>
+      
+      <div class="hero-collaboration-note" style="margin-bottom: 48px;">
+        💡 <strong>Cross-Functional Mission:</strong> Together, we build technology that empowers direct marketing connections by translating customer feedback into highly reliable, enterprise-grade software.
+      </div>
+      
+      <!-- Floating visual ecosystem mockup nodes inside Hero -->
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; max-width: 800px; margin: 0 auto;">
+        <div class="card-glass" style="padding: 12px 20px; border-radius: 30px; display: flex; align-items: center; gap: 10px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2);">
+          <i data-lucide="smartphone" style="color: var(--accent-purple); width: 16px; height: 16px;"></i>
+          <span style="font-size: 12px; font-weight: 600;">Flutter Mobile App</span>
+        </div>
+        <div class="card-glass" style="padding: 12px 20px; border-radius: 30px; display: flex; align-items: center; gap: 10px; background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2);">
+          <i data-lucide="server" style="color: var(--accent-cyan); width: 16px; height: 16px;"></i>
+          <span style="font-size: 12px; font-weight: 600;">NestJS Core API</span>
+        </div>
+        <div class="card-glass" style="padding: 12px 20px; border-radius: 30px; display: flex; align-items: center; gap: 10px; background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.2);">
+          <i data-lucide="database" style="color: var(--accent-pink); width: 16px; height: 16px;"></i>
+          <span style="font-size: 12px; font-weight: 600;">PostgreSQL Relational DB</span>
+        </div>
+        <div class="card-glass" style="padding: 12px 20px; border-radius: 30px; display: flex; align-items: center; gap: 10px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2);">
+          <i data-lucide="layout" style="color: var(--accent-emerald); width: 16px; height: 16px;"></i>
+          <span style="font-size: 12px; font-weight: 600;">React Operations Panel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Ecosystem & Platforms Section -->
+  <section id="platforms">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Platform Layout</span>
+        <h2 class="section-title">Our Ecosystem & Platforms</h2>
+        <p class="section-subtitle">Influish operates across three specialized frontend applications connecting brands and creators seamlessly.</p>
+      </div>
+      
+      <div class="ecosystem-grid reveal">
+        <!-- Mobile App Card -->
+        <div class="card-glass">
+          <div class="ecosystem-card-header">
+            <div class="ecosystem-icon-wrapper icon-purple">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <h3 class="ecosystem-card-title">Mobile App</h3>
+          </div>
+          <div class="ecosystem-body-title">For Whom</div>
+          <div class="ecosystem-body-desc">Influencers and Brands on the go.</div>
+          
+          <div class="ecosystem-body-title">Main Purpose</div>
+          <div class="ecosystem-body-desc">Browse and apply to campaigns, manage ongoing influencer collaborations, and track wallets.</div>
+          
+          <div class="ecosystem-body-title">Core Advantages</div>
+          <div class="ecosystem-body-desc">Built on a single high-performance codebase, meaning any new feature releases to both iOS and Android simultaneously.</div>
+        </div>
+
+        <!-- Admin Panel Card -->
+        <div class="card-glass">
+          <div class="ecosystem-card-header">
+            <div class="ecosystem-icon-wrapper icon-cyan">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="ecosystem-card-title">Admin Panel</h3>
+          </div>
+          <div class="ecosystem-body-title">For Whom</div>
+          <div class="ecosystem-body-desc">Internal operations and support teams.</div>
+          
+          <div class="ecosystem-body-title">Main Purpose</div>
+          <div class="ecosystem-body-desc">Review campaigns, approve user KYC document verifications, reconcile payouts, and monitor system activities.</div>
+          
+          <div class="ecosystem-body-title">Core Advantages</div>
+          <div class="ecosystem-body-desc">Complete administrative visibility over platform transactions and security audits.</div>
+        </div>
+
+        <!-- Website Card -->
+        <div class="card-glass">
+          <div class="ecosystem-card-header">
+            <div class="ecosystem-icon-wrapper icon-pink">
+              <i data-lucide="globe"></i>
+            </div>
+            <h3 class="ecosystem-card-title">Website</h3>
+          </div>
+          <div class="ecosystem-body-title">For Whom</div>
+          <div class="ecosystem-body-desc">Prospective brands and influencers.</div>
+          
+          <div class="ecosystem-body-title">Main Purpose</div>
+          <div class="ecosystem-body-desc">Provide public marketing information, campaign landing pages, and lead intake collections.</div>
+          
+          <div class="ecosystem-body-title">Core Advantages</div>
+          <div class="ecosystem-body-desc">SEO-optimized entry point for new user acquisition and brand registrations.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Frontend vs Backend Section -->
+  <section id="split-view">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Architecture Split</span>
+        <h2 class="section-title">Tech 101: Frontend vs. Backend</h2>
+        <p class="section-subtitle">Understanding how the user interface relates to our central server engine using a classic restaurant model.</p>
+      </div>
+      
+      <div class="split-view-container reveal">
+        <!-- Frontend Block -->
+        <div class="split-side">
+          <div class="split-side-header">
+            <span class="split-analogy-badge badge-purple">
+              <span class="inline-icon"><i data-lucide="utensils"></i></span> The Dining Area
+            </span>
+            <h3 class="split-side-title">The Frontend</h3>
+            <p class="split-side-desc">The visual interface that users see, tap, and interact with across all devices.</p>
+          </div>
+          
+          <div class="split-items-list">
+            <div class="split-item">
+              <div class="split-item-icon">
+                <i data-lucide="smartphone" style="color: var(--accent-purple);"></i>
+              </div>
+              <div>
+                <h4 class="split-item-title">Flutter Mobile App</h4>
+                <p class="split-item-desc">Interactive mobile screens and animations optimized for iOS and Android.</p>
+              </div>
+            </div>
+            <div class="split-item">
+              <div class="split-item-icon">
+                <i data-lucide="layout" style="color: var(--accent-purple);"></i>
+              </div>
+              <div>
+                <h4 class="split-item-title">React Admin Panel</h4>
+                <p class="split-item-desc">Clean operations interfaces, campaign management views, and transaction sheets.</p>
+              </div>
+            </div>
+            <div class="split-item">
+              <div class="split-item-icon">
+                <i data-lucide="globe" style="color: var(--accent-purple);"></i>
+              </div>
+              <div>
+                <h4 class="split-item-title">Marketing Website</h4>
+                <p class="split-item-desc">Responsive layouts, public landing pages, and user sign-up modules.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Block -->
+        <div class="split-side">
+          <div class="split-side-header">
+            <span class="split-analogy-badge badge-pink">
+              <span class="inline-icon"><i data-lucide="chef-hat"></i></span> The Kitchen
+            </span>
+            <h3 class="split-side-title">The Backend</h3>
+            <p class="split-side-desc">The hidden database system, calculations engine, and API services running in the background.</p>
+          </div>
+          
+          <div class="split-items-list">
+            <div class="split-item">
+              <div class="split-item-icon">
+                <i data-lucide="server" style="color: var(--accent-pink);"></i>
+              </div>
+              <div>
+                <h4 class="split-item-title">NestJS Core API</h4>
+                <p class="split-item-desc">The main application coordinator handling requests, user profiles, and logic routes.</p>
+              </div>
+            </div>
+            <div class="split-item">
+              <div class="split-item-icon">
+                <i data-lucide="database" style="color: var(--accent-pink);"></i>
+              </div>
+              <div>
+                <h4 class="split-item-title">PostgreSQL Database</h4>
+                <p class="split-item-desc">Secure, relational data vaults storing KYC files, payment transactions, and campaign metrics.</p>
+              </div>
+            </div>
+            <div class="split-item">
+              <div class="split-item-icon">
+                <i data-lucide="cpu" style="color: var(--accent-pink);"></i>
+              </div>
+              <div>
+                <h4 class="split-item-title">Automation & Workflows</h4>
+                <p class="split-item-desc">Redis-backed jobs executing automated messages, pushes, and background checkups.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Mobile vs Web Differences Section -->
+  <section id="differences">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Environment Nuance</span>
+        <h2 class="section-title">Mobile vs. Web (Key Differences)</h2>
+        <p class="section-subtitle">Operational differences that govern how we launch updates and how users consume new features.</p>
+      </div>
+      
+      <div class="comparison-cards-grid reveal">
+        <!-- Web Platforms Card -->
+        <div class="comparison-card">
+          <h3 class="comparison-card-title text-gradient-cyan">
+            <span class="inline-icon"><i data-lucide="chrome"></i></span>
+            Web Platforms
+          </h3>
+          
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">Access Method</span>
+            <span class="comp-metric-val">URL via standard internet browsers (Safari, Chrome).</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">Release Speed</span>
+            <span class="comp-metric-val text-bold" style="color: var(--accent-cyan);">Instant. Updates take effect immediately upon deployment.</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">User Adoption</span>
+            <span class="comp-metric-val">Automatic. All users are forced to load the latest code on reload.</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">Hardware Access</span>
+            <span class="comp-metric-val">Limited capability to utilize physical device hardware.</span>
+          </div>
+        </div>
+
+        <!-- Mobile App Card -->
+        <div class="comparison-card" style="border: 1px solid rgba(139, 92, 246, 0.2);">
+          <h3 class="comparison-card-title text-gradient-purple">
+            <span class="inline-icon"><i data-lucide="smartphone"></i></span>
+            Mobile Application
+          </h3>
+          
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">Access Method</span>
+            <span class="comp-metric-val">Downloadable setup via Apple App Store & Google Play Store.</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">Release Speed</span>
+            <span class="comp-metric-val text-bold" style="color: var(--accent-purple);">Delayed. Apple/Google reviews require 2 hours to 2 days.</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">User Adoption</span>
+            <span class="comp-metric-val">Gradual. Users must download the package updates manually or automatically.</span>
+          </div>
+          <div class="comp-metric-row">
+            <span class="comp-metric-label">Hardware Access</span>
+            <span class="comp-metric-val">Deep access (push notifications, cameras, biometrics, offline cache).</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Tech Team Structure Section -->
+  <section id="team">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">Tech Team Structure</h2>
+        <p class="section-subtitle">Our engineering division is structured to cover the entire development lifecycle, optimizing resource outputs.</p>
+      </div>
+      
+      <div class="team-grid reveal">
+        <!-- Tech Lead -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar-box">
+              <i data-lucide="crown" style="color: var(--accent-amber);"></i>
+            </div>
+            <span class="team-count-badge">Count: 1</span>
+          </div>
+          <div>
+            <h4 class="team-role">Tech Lead (Full Stack)</h4>
+            <p class="team-resp">Oversees product architecture, reviews code security, designs system task breakdowns on Jira, and manages release schedules.</p>
+          </div>
+        </div>
+
+        <!-- Mobile FE Developers -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar-box">
+              <i data-lucide="smartphone" style="color: var(--accent-purple);"></i>
+            </div>
+            <span class="team-count-badge">Count: 2</span>
+          </div>
+          <div>
+            <h4 class="team-role">Mobile FE Developers</h4>
+            <p class="team-resp">Focus strictly on our Flutter mobile app, coding smooth responsive widgets, caching local data, and implementing socket connections.</p>
+          </div>
+        </div>
+
+        <!-- Web FE Developers -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar-box">
+              <i data-lucide="layout" style="color: var(--accent-cyan);"></i>
+            </div>
+            <span class="team-count-badge">Count: 2</span>
+          </div>
+          <div>
+            <h4 class="team-role">Web FE Developers</h4>
+            <p class="team-resp">Design and optimize React.js interfaces for our internal Admin Panel and public campaign websites.</p>
+          </div>
+        </div>
+
+        <!-- Backend Developers -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar-box">
+              <i data-lucide="server" style="color: var(--accent-pink);"></i>
+            </div>
+            <span class="team-count-badge">Count: 2</span>
+          </div>
+          <div>
+            <h4 class="team-role">Backend Developers</h4>
+            <p class="team-resp">Maintain modular NestJS services, run PostgreSQL schema modifications, and integrate Razorpay or Cashfree APIs.</p>
+          </div>
+        </div>
+
+        <!-- Full Stack Developer -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar-box">
+              <i data-lucide="zap" style="color: var(--accent-amber);"></i>
+            </div>
+            <span class="team-count-badge">Count: 1</span>
+          </div>
+          <div>
+            <h4 class="team-role">Full Stack Developer</h4>
+            <p class="team-resp">Bridges the gap between frontend panels and backend servers, expediting end-to-end integration tasks.</p>
+          </div>
+        </div>
+
+        <!-- QA Engineers -->
+        <div class="team-card">
+          <div class="team-header">
+            <div class="team-avatar-box">
+              <i data-lucide="shield" style="color: var(--accent-emerald);"></i>
+            </div>
+            <span class="team-count-badge">Count: 3</span>
+          </div>
+          <div>
+            <h4 class="team-role">QA Engineers</h4>
+            <p class="team-resp">Responsible for end-to-end regression testing. They audit every UI button and API status before any feature is approved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Feature Lifecycle Section -->
+  <section id="lifecycle">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">System Flow</span>
+        <h2 class="section-title">Our Feature Lifecycle</h2>
+        <p class="section-subtitle">How we collaborate from the initial idea document down to deploying live code on production.</p>
+      </div>
+      
+      <!-- Visual Flow Wrapper -->
+      <div class="lifecycle-visual-container reveal">
+        <!-- Rendered Mermaid JS Diagram from Source -->
+        <div class="mermaid-diagram-box">
+          <div class="mermaid">
+            graph TD
+                A[1. PD Team - Feature PRD] --> B[2. UI/UX Team - Designs]
+                B --> C[3. PD Review & Approval]
+                C --> D[4. Tech Lead - Technical Planning & Jira]
+                D --> E[5. Tech Team - Dev Phase]
+                E --> F[6. QA Team - Testing Loop]
+                F -- Bugs Found --> G[Report on Jira & Fix]
+                G --> E
+                F -- QA Sign-off --> H[7. PD Team - Final Review/UAT on Staging]
+                H -- Approved --> I[8. Live Production Release]
+                H -- Enhancements Needed --> J[Connect with Tech Lead]
+                J --> D
+          </div>
+        </div>
+        
+        <!-- Timeline Steps Context -->
+        <div class="timeline-visual-steps">
+          <div class="timeline-v-step">
+            <div class="timeline-v-step-num">Step 1-3</div>
+            <div class="timeline-v-step-title">PRD & Design Stage</div>
+            <div class="timeline-v-step-desc">PD drafts feature expectations; UI/UX creates visual flows which are approved by PD.</div>
+          </div>
+          <div class="timeline-v-step">
+            <div class="timeline-v-step-num">Step 4-5</div>
+            <div class="timeline-v-step-title">Jira & Dev Phase</div>
+            <div class="timeline-v-step-desc">Tech Lead breaks PRD into task boards. Developers estimate timelines and start coding.</div>
+          </div>
+          <div class="timeline-v-step">
+            <div class="timeline-v-step-num">Step 6</div>
+            <div class="timeline-v-step-title">QA Verification Loop</div>
+            <div class="timeline-v-step-desc">QA tests logic on staging. If bugs are found, they go to Jira for dev fixes and retest.</div>
+          </div>
+          <div class="timeline-v-step">
+            <div class="timeline-v-step-num">Step 7-8</div>
+            <div class="timeline-v-step-title">UAT & Deploy</div>
+            <div class="timeline-v-step-desc">PD runs User Acceptance Testing (UAT) on Staging. Once approved, code is released to Live users.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Tech Capabilities Section -->
+  <section id="capabilities">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Tech Strength</span>
+        <h2 class="section-title">Technical Capabilities (BD Pitch Kit)</h2>
+        <p class="section-subtitle">How our technical systems deliver business value and high performance for our brands and creators.</p>
+      </div>
+      
+      <div class="capabilities-grid reveal">
+        <!-- Flutter -->
+        <div class="card-glass cap-card">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-purple);"><i data-lucide="smartphone"></i></span> Flutter Cross-Platform
+            </div>
+            <h4 class="cap-title">Single-Codebase Mobile Engineering</h4>
+            <p class="cap-desc">Utilizes a unified structure to write application files that build for iOS and Android simultaneously.</p>
+          </div>
+          <div class="cap-impact-box">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Launches features on both app stores at the exact same time, providing an identical experience.
+          </div>
+        </div>
+
+        <!-- NestJS -->
+        <div class="card-glass cap-card">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-cyan);"><i data-lucide="server"></i></span> NestJS Modular Core
+            </div>
+            <h4 class="cap-title">Enterprise-Grade Server Framework</h4>
+            <p class="cap-desc">Built with highly scalable patterns (Domain-Driven Design) ensuring predictable application routing.</p>
+          </div>
+          <div class="cap-impact-box">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Protects servers from crashing during high-volume campaign traffic hours.
+          </div>
+        </div>
+
+        <!-- PostgreSQL & Prisma -->
+        <div class="card-glass cap-card">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-pink);"><i data-lucide="database"></i></span> PostgreSQL & Prisma
+            </div>
+            <h4 class="cap-title">Type-Safe Relational Storage</h4>
+            <p class="cap-desc">Prisma ORM abstracts sql operations into strictly typed models mapping database relations reliably.</p>
+          </div>
+          <div class="cap-impact-box">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Guarantees bank-grade security for user data, verification files, and transaction ledgers.
+          </div>
+        </div>
+
+        <!-- Redis & BullMQ -->
+        <div class="card-glass cap-card">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-purple);"><i data-lucide="layers"></i></span> Redis & BullMQ
+            </div>
+            <h4 class="cap-title">Non-blocking Worker Queues</h4>
+            <p class="cap-desc">Buffers large surges of webhook notifications and automations in memory without blocking server threads.</p>
+          </div>
+          <div class="cap-impact-box">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Scales Instagram DM campaigns to millions of messages without slowing down core interfaces.
+          </div>
+        </div>
+
+        <!-- Socket.IO -->
+        <div class="card-glass cap-card">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-cyan);"><i data-lucide="message-square"></i></span> Socket.IO Real-time
+            </div>
+            <h4 class="cap-title">Continuous WebSocket Handshakes</h4>
+            <p class="cap-desc">Establishes continuous duplex channels between user devices and servers for messaging streams.</p>
+          </div>
+          <div class="cap-impact-box">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Delivers chats instantly in real-time, removing manual refresh delays.
+          </div>
+        </div>
+
+        <!-- Razorpay & Cashfree -->
+        <div class="card-glass cap-card">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-pink);"><i data-lucide="credit-card"></i></span> Razorpay & Cashfree
+            </div>
+            <h4 class="cap-title">Multi-Gateway Payment Foundations</h4>
+            <p class="cap-desc">Integrates premium SDK systems for automated bank settlement and secure transactions.</p>
+          </div>
+          <div class="cap-impact-box">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Automates instant influencer wallet payouts and provides brands with seamless pay options.
+          </div>
+        </div>
+
+        <!-- SigNoz -->
+        <div class="card-glass cap-card" style="grid-column: span 1; @media(min-width:768px) { grid-column: span 2; }">
+          <div>
+            <div class="cap-tech-badge">
+              <span class="inline-icon" style="color: var(--accent-emerald);"><i data-lucide="activity"></i></span> SigNoz Observability
+            </div>
+            <h4 class="cap-title">Active Metrics & Tracing</h4>
+            <p class="cap-desc">OpenTelemetry exporter continuously profiles system speeds, logging operations, and database latency markers.</p>
+          </div>
+          <div class="cap-impact-box" style="margin-top: 12px;">
+            <span class="inline-icon"><i data-lucide="trending-up"></i></span> <strong>Business Impact:</strong> Triggers immediate alerts if any request slows by 200ms, enabling pre-emptive fixes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. How AI Will Help Us Section -->
+  <section id="ai-help">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Future Outlook</span>
+        <h2 class="section-title">How AI Will Help Us</h2>
+        <p class="section-subtitle">Integrating intelligent automation to supercharge our campaigns, support our creators, and scale our development velocity.</p>
+      </div>
+      
+      <div class="ecosystem-grid reveal">
+        <!-- Card 1: Empowering Brands -->
+        <div class="card-glass">
+          <div class="ecosystem-card-header">
+            <div class="ecosystem-icon-wrapper icon-purple">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="ecosystem-card-title">Empowering Brands</h3>
+          </div>
+          
+          <div class="ecosystem-body-title">AI Brief Generator</div>
+          <div class="ecosystem-body-desc">Instantly drafts optimized campaign briefs, audience targets, and aesthetic guidelines from basic brand objectives.</div>
+          
+          <div class="ecosystem-body-title">Predictive Matchmaking</div>
+          <div class="ecosystem-body-desc">Analyzes historic creator engagement, niche relevance, and audience demographics to forecast campaign ROI before hiring.</div>
+          
+          <div class="ecosystem-body-title">Sentiment Analysis</div>
+          <div class="ecosystem-body-desc">Scans thousands of post comments automatically to gauge direct consumer sentiment and campaign effectiveness.</div>
+        </div>
+
+        <!-- Card 2: Elevating Creators -->
+        <div class="card-glass">
+          <div class="ecosystem-card-header">
+            <div class="ecosystem-icon-wrapper icon-cyan">
+              <i data-lucide="brain"></i>
+            </div>
+            <h3 class="ecosystem-card-title">Elevating Creators</h3>
+          </div>
+          
+          <div class="ecosystem-body-title">Smart Recommendations</div>
+          <div class="ecosystem-body-desc">Proactively recommends campaign options perfectly matched to the creator's content style and primary audience.</div>
+          
+          <div class="ecosystem-body-title">Aesthetic Co-Pilot</div>
+          <div class="ecosystem-body-desc">Provides smart hooks, caption drafts, and script feedback tailored to the brand's specifications.</div>
+          
+          <div class="ecosystem-body-title">24/7 AI Concierge</div>
+          <div class="ecosystem-body-desc">An in-app AI support assistant resolving creator questions about guidelines, payments, or verification instantly.</div>
+        </div>
+
+        <!-- Card 3: Accelerating Ops & Tech -->
+        <div class="card-glass">
+          <div class="ecosystem-card-header">
+            <div class="ecosystem-icon-wrapper icon-pink">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3 class="ecosystem-card-title">Accelerating Ops & Tech</h3>
+          </div>
+          
+          <div class="ecosystem-body-title">Auto-Verification</div>
+          <div class="ecosystem-body-desc">Automatically verifies that influencer posts contain the correct hashtags, brand tags, and comply with guidelines.</div>
+          
+          <div class="ecosystem-body-title">Fraud & KYC Audit</div>
+          <div class="ecosystem-body-desc">Scans KYC uploads and creator account parameters using computer vision to detect duplicated identities or invalid documents.</div>
+          
+          <div class="ecosystem-body-title">Dev & QA Velocity</div>
+          <div class="ecosystem-body-desc">Leverages AI coding agents and automated test generators to write regression suites and deploy updates 3x faster.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Environments Section -->
+  <section id="envs">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Safe Deployments</span>
+        <h2 class="section-title">Isolated Environments</h2>
+        <p class="section-subtitle">We run completely separate environment infrastructures to guarantee reliability for active campaigns.</p>
+      </div>
+      
+      <div class="envs-grid reveal">
+        <!-- Staging Card -->
+        <div class="card-glass env-card">
+          <div class="env-indicator indicator-staging">
+            <span class="inline-icon"><i data-lucide="flask-conical"></i></span>
+            Staging Environment
+          </div>
+          <h3 class="env-card-title">Pre-Production Testing</h3>
+          <p class="ecosystem-body-desc" style="margin-bottom: 20px;">
+            A duplicate replica of our production platform used for initial regression verification.
+          </p>
+          
+          <div class="env-meta-section">
+            <div class="env-meta-title">Purpose</div>
+            <div class="env-meta-val">Validation of new features, bug fixes, and rigorous automated testing loops.</div>
+          </div>
+          <div class="env-meta-section">
+            <div class="env-meta-title">Why it matters</div>
+            <div class="env-meta-val">Allows PD to perform User Acceptance Testing (UAT) and BD to preview features safely without breaking active campaigns.</div>
+          </div>
+        </div>
+
+        <!-- Production Card -->
+        <div class="card-glass env-card" style="border: 1px solid rgba(236, 72, 153, 0.2);">
+          <div class="env-indicator indicator-prod">
+            <span class="inline-icon"><i data-lucide="rocket"></i></span>
+            Production Environment
+          </div>
+          <h3 class="env-card-title">Live Creator Operations</h3>
+          <p class="ecosystem-body-desc" style="margin-bottom: 20px;">
+            The active user environment delivering real influencer marketing campaigns and transactions.
+          </p>
+          
+          <div class="env-meta-section">
+            <div class="env-meta-title">Purpose</div>
+            <div class="env-meta-val">Runs production integrations, real-time message automation queues, and transaction audits.</div>
+          </div>
+          <div class="env-meta-section">
+            <div class="env-meta-title">Strict Rule</div>
+            <div class="env-meta-val" style="color: var(--accent-pink); font-weight: 600;">No code is ever uploaded directly to Production without passing QA testing and securing official PD sign-off on Staging.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Collaboration Best Practices Section -->
+  <section id="collab">
+    <div class="section-wrapper">
+      <div class="reveal">
+        <span class="section-label">Team Alignment</span>
+        <h2 class="section-title">Collaboration Best Practices</h2>
+        <p class="section-subtitle">Guidelines to establish highly efficient operational bridges between our teams and developers.</p>
+      </div>
+      
+      <div class="collab-split reveal">
+        <!-- PD Column -->
+        <div class="card-glass collab-column">
+          <div class="collab-col-header">
+            <div class="collab-col-icon icon-collab-pd">
+              <i data-lucide="clipboard-list"></i>
+            </div>
+            <h3 class="collab-col-title">Tips for the PD Team</h3>
+          </div>
+          
+          <div class="collab-list">
+            <!-- Item 1 -->
+            <div class="collab-item">
+              <div class="collab-checkbox-wrapper">
+                <i data-lucide="check"></i>
+              </div>
+              <div>
+                <h4 class="collab-item-title">Define Clear Edge-Cases</h4>
+                <p class="collab-item-desc">Outline scenario rules inside the PRDs (e.g., "What happens if KYC uploads fail?" or "What actions occur during Razorpay failures?").</p>
+              </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="collab-item">
+              <div class="collab-checkbox-wrapper">
+                <i data-lucide="check"></i>
+              </div>
+              <div>
+                <h4 class="collab-item-title">Maintain Clean Jira Boards</h4>
+                <p class="collab-item-desc">Link visual Figma boards and PRD specification links directly in primary Jira tickets to establish a single source of truth.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="collab-item">
+              <div class="collab-checkbox-wrapper">
+                <i data-lucide="check"></i>
+              </div>
+              <div>
+                <h4 class="collab-item-title">Complete Prompt UAT Audits</h4>
+                <p class="collab-item-desc">Test feature deployments on Staging within 24 to 48 hours once QA flags the status as 'Ready for UAT' to prevent release bottlenecks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BD Column -->
+        <div class="card-glass collab-column">
+          <div class="collab-col-header">
+            <div class="collab-col-icon icon-collab-bd">
+              <i data-lucide="users"></i>
+            </div>
+            <h3 class="collab-col-title">Tips for the BD Team</h3>
+          </div>
+          
+          <div class="collab-list">
+            <!-- Item 1 -->
+            <div class="collab-item">
+              <div class="collab-checkbox-wrapper" style="color: var(--accent-pink);">
+                <i data-lucide="check"></i>
+              </div>
+              <div>
+                <h4 class="collab-item-title">Build Quality Feedback Channels</h4>
+                <p class="collab-item-desc">Document exact details when reporting user problems (e.g., screenshot samples, client details, and specific physical device models).</p>
+              </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="collab-item">
+              <div class="collab-checkbox-wrapper" style="color: var(--accent-pink);">
+                <i data-lucide="check"></i>
+              </div>
+              <div>
+                <h4 class="collab-item-title">Channel Requests Through PD</h4>
+                <p class="collab-item-desc">Discuss new client request ideas with PD first so they are strategically sorted and prioritized on our feature roadmaps.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="collab-item">
+              <div class="collab-checkbox-wrapper" style="color: var(--accent-pink);">
+                <i data-lucide="check"></i>
+              </div>
+              <div>
+                <h4 class="collab-item-title">Coordinate Data Requests via Tech Lead</h4>
+                <p class="collab-item-desc">For custom analytical reports not yet in the Admin Panel, coordinate with the Tech Lead to schedule SQL database query extracts safely.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Final CTA Section -->
+  <section class="final-sec">
+    <div class="reveal">
+      <h2 class="final-title">
+        <span class="gradient-final-text">Together, We Build Technology That Empowers Connections.</span>
+      </h2>
+      
+      <div class="final-logo-block" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 24px; border-radius: 30px; border: 1px solid var(--border-light); background: rgba(255,255,255,0.01); justify-content: center; margin: 0 auto;">
+        <img src="icon.png" alt="Influish Logo" style="width: 24px; height: 24px; object-fit: contain;">
+        <span style="font-weight: 600; letter-spacing: 0.05em; font-family: var(--font-display);">Influish Engineering Hub</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
